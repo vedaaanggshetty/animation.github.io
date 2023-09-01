@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animation Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-image: url("b2.webp");
+        }
+
+        /* Scrolling Text Animation */
+        .scroll-text-container {
+            overflow: hidden;
+            white-space: nowrap;
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            
+            
+        }
+        .scroll-text-container:hover{
+            background-color: white;
+            color: black;
+        }
+
+        .scroll-text {
+            animation: scrollText 10s linear infinite;
+        }
+
+        @keyframes scrollText {
+            0% {
+                transform: translateX(-100%);
+            }
+            100% {
+                transform: translateX(100%);
+            }
+        }
+
+       /* Blinking Text Animation */
+.blink-text-container {
+    background-color: white;
+    color: black;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 20px;
+    border: 2px solid #333; /* Add a border around the container */
+    display: inline-block; /* Make the container inline-block to fit the content */
+}
+
+        .blink-text-container:hover {
+            background-color: black;
+            color: white;
+        }
+
+        
+        .blink-text {
+            animation: blink 1s ease-in-out infinite alternate;
+        }
+
+        @keyframes blink {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Scrolling Text -->
+    <div class="scroll-text-container">
+        <div class="scroll-text">
+           Hello guys please help me im drowning, im under the water
+        </div>
+    </div>
+
+    <!-- Blinking Text -->
+    <div class="blink-text-container">
+        <p class="blink-text">This text is blinking!</p>
+    </div>
+</body>
+</html>
